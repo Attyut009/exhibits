@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Class 9 Exhibits</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* Page heading */
+h1 {
+    font-size: 50px;
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
+    margin-bottom: 10px;
+}
+
+/* Students list */
+.students {
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+/* Topic boxes */
+.topic {
+    background: linear-gradient(145deg, #111, #222);
+    border: 2px solid #00eaff;
+    padding: 20px;
+    margin: 15px auto;
+    width: 80%;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+
+.topic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00eaff, 0 0 40px #00eaff;
+}
+
+/* Details (animated) */
+.details {
+    max-height: 0;
+    overflow: hidden;
+    background: #111;
+    border-left: 4px solid #00eaff;
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+    border-radius: 8px;
+    opacity: 0;
+    padding: 0 20px;
+    transition: max-height 0.6s ease, opacity 0.4s ease, padding 0.4s ease;
+}
+
+/* Show animation */
+.details.show {
+    max-height: 500px;
+    opacity: 1;
+    padding: 15px 20px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Class 9 Exhibits</h1>
+    <div class="students">
+        Hiru Panda | Samarpit Kundu | Ushashree Hembram
+    </div>
+
+    <!-- Chandrayaan III -->
+    <div class="topic" onclick="showDetails('ch3')">Science: Chandrayaan III
+        <div class="details" id="ch3">
+            1. Chandrayaan-III is India’s third lunar exploration mission by ISRO.<br>
+            2. It landed successfully on 23 August 2023 near the Moon’s south pole.<br>
+            3. It included the Vikram lander and Pragyan rover.<br>
+            4. The mission proved India’s soft landing capability.<br>
+            5. The rover studied lunar soil, temperature and minerals.
+        </div>
+    </div>
+
+    <!-- Bengali: About the Poets -->
+    <div class="topic" onclick="showDetails('ben')">Bengali: About the Poets
+        <div class="details" id="ben">
+            1. Students study the lives of famous Bengali poets.<br>
+            2. Poets like Tagore, Jibanananda and Sukumar Ray are highlighted.<br>
+            3. Their writing styles and messages are discussed.<br>
+            4. Students present recitation, biographies and analysis.<br>
+            5. Helps improve literary understanding and appreciation.
+        </div>
+    </div>
+
+    <!-- Computer: Java Games -->
+    <div class="topic" onclick="showDetails('comp')">Computer: Java Games
+        <div class="details" id="comp">
+            1. Students create interactive games using Java.<br>
+            2. Concepts like loops, conditions, OOP and events are used.<br>
+            3. Games include Tic-Tac-Toe, Snake, Brick Breaker etc.<br>
+            4. Enhances logical thinking and debugging skills.<br>
+            5. Teaches real-world programming and creativity.
+        </div>
+    </div>
+
+    <!-- History: Fundamental Rights -->
+    <div class="topic" onclick="showDetails('hist')">History: Fundamental Rights
+        <div class="details" id="hist">
+            1. Fundamental Rights are guaranteed by the Indian Constitution.<br>
+            2. They include equality, freedom, religion and education rights.<br>
+            3. Protects citizens from injustice and discrimination.<br>
+            4. Students study case studies and real-life applications.<br>
+            5. Shows how rights strengthen democracy.
+        </div>
+    </div>
+
+    <!-- Physics: Hydraulic Lift & Rain Sensor -->
+    <div class="topic" onclick="showDetails('phy')">Physics: Hydraulic Lift & Rain Sensor
+        <div class="details" id="phy">
+            1. Hydraulic lift works using Pascal’s Law (pressure transmission).<br>
+            2. Demonstrates force multiplication through liquids.<br>
+            3. Rain sensor detects water using conductive or IR circuits.<br>
+            4. Used in automatic wipers and irrigation systems.<br>
+            5. Students build working models showing automation.
+        </div>
+    </div>
+
+    <!-- Chemistry: Atomic Structure -->
+    <div class="topic" onclick="showDetails('chem')">Chemistry: Atomic Structure
+        <div class="details" id="chem">
+            1. Explains atom composition—protons, neutrons and electrons.<br>
+            2. Students learn Bohr’s and quantum models.<br>
+            3. Electrons arranged in shells and subshells.<br>
+            4. Basis of chemical bonding and reactions.<br>
+            5. Includes models of isotopes, ions and orbitals.
+        </div>
+    </div>
+
+    <!-- Mathematics: Statistics -->
+    <div class="topic" onclick="showDetails('math')">Mathematics: Statistics
+        <div class="details" id="math">
+            1. Statistics deals with collecting and interpreting data.<br>
+            2. Students calculate mean, median and mode.<br>
+            3. Data represented using bar graphs and histograms.<br>
+            4. Helps identify trends and patterns.<br>
+            5. Projects include surveys and chart making.
+        </div>
+    </div>
+
+</div>
+
+<script>
+let current = null;
+
+function showDetails(id) {
+    if (current && current !== id) {
+        document.getElementById(current).classList.remove("show");
+    }
+
+    const el = document.getElementById(id);
+
+    if (el.classList.contains("show")) {
+        el.classList.remove("show");
+        current = null;
+    } else {
+        el.classList.add("show");
+        current = id;
+    }
+}
+</script>
+
+</body>
+</html>

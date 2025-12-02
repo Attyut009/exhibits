@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Exhibition 2025</title>
+<style>
+
+/* ====== TECHNO THEME BACKGROUND ====== */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+    color: white;
+    overflow-x: hidden;
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(0,255,0,0.2), transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(0,255,150,0.2), transparent 50%),
+        linear-gradient(45deg, rgba(0,255,60,0.1) 0%, transparent 100%),
+        url('bg2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* ====== PAGE CONTAINER ====== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* ====== GLOWING + ZOOM ANIMATION HEADING ====== */
+h1 {
+    font-size: 60px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    color: #00ff85;
+    text-shadow: 0 0 10px #00ff85, 0 0 20px #00ff85, 0 0 40px #00ff85;
+    animation: zoomAnimation 3s infinite ease-in-out;
+}
+
+@keyframes zoomAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+    100% { transform: scale(1); }
+}
+
+/* ====== SUB HEADING ====== */
+.subheading {
+    font-size: 38px;
+    margin-top: 80px;
+    text-align: center;
+    color: #00ffb3;
+    text-shadow: 0 0 15px #00ffb3;
+}
+
+/* ====== CLASS GRID ====== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* ====== CLASS BOXES ====== */
+.box {
+    padding: 40px 0;
+    border-radius: 15px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.3s;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    display: block;
+}
+
+.box:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px currentColor, 0 0 40px currentColor;
+}
+
+/* CLASS COLORS */
+.class1  { background:#1a1a1a; color:#00ffaa; box-shadow:0 0 15px #00ffaa; }
+.class2  { background:#1a1a1a; color:#00e6ff; box-shadow:0 0 15px #00e6ff; }
+.class3  { background:#1a1a1a; color:#ff009d; box-shadow:0 0 15px #ff009d; }
+.class4  { background:#1a1a1a; color:#ffdd00; box-shadow:0 0 15px #ffdd00; }
+.class5  { background:#1a1a1a; color:#a200ff; box-shadow:0 0 15px #a200ff; }
+.class6  { background:#1a1a1a; color:#ff3c00; box-shadow:0 0 15px #ff3c00; }
+.class7  { background:#1a1a1a; color:#00ff44; box-shadow:0 0 15px #00ff44; }
+.class8  { background:#1a1a1a; color:#00b7ff; box-shadow:0 0 15px #00b7ff; }
+.class9  { background:#1a1a1a; color:#ff006a; box-shadow:0 0 15px #ff006a; }
+.class10 { background:#1a1a1a; color:#ffd000; box-shadow:0 0 15px #ffd000; }
+
+/* ====== CAROUSEL ====== */
+.carousel-container {
+    width: 50%;
+    margin: 60px auto;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0,255,120,0.4);
+}
+
+.carousel-slide { display: none; }
+
+.carousel-slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Fade animation */
+.fade {
+    animation-name: fadeEffect;
+    animation-duration: 1.5s;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+}
+
+/* Next / Prev */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    padding: 10px;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    border-radius: 6px;
+    transform: translateY(-50%);
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Dots */
+.dots-box {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    background: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.active { background: #00ff85; }
+
+/* ====== INTRO TEXT ====== */
+.intro {
+    width: 80%;
+    margin: 30px auto;
+    font-size: 19px;
+    line-height: 1.8;
+    color: #e5e5e5;
+    text-align: justify;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Exhibition 2025</h1>
+
+    <div class="intro">
+        The Annual School Exhibition is a platform designed to showcase the creativity, talent, and conceptual understanding of students.  
+        It transforms classroom learning into real-world applications through models, experiments, research work, and innovative presentations.  
+        This event not only strengthens problem-solving and communication skills but also builds confidence as students interact with visitors,  
+        explain their ideas, and demonstrate their understanding with clarity and originality.
+    </div>
+
+    <div class="grid">
+        <a href="cl1.html" class="box class1">Class 1</a>
+        <a href="cl2.html" class="box class2">Class 2</a>
+        <a href="cl3.html" class="box class3">Class 3</a>
+        <a href="cl4.html" class="box class4">Class 4</a>
+        <a href="cl5.html" class="box class5">Class 5</a>
+        <a href="cl6.html" class="box class6">Class 6</a>
+        <a href="cl7.html" class="box class7">Class 7</a>
+        <a href="cl8.html" class="box class8">Class 8</a>
+        <a href="cl9.html" class="box class9">Class 9</a>
+        <a href="cl10.html" class="box class10">Class 10</a>
+    </div>
+</div>
+
+<!-- PHOTO GALLERY HEADING -->
+<div class="subheading">Photo Gallery</div>
+
+<!-- ====== IMAGE CAROUSEL (9 images for now, ready for 15) ====== -->
+<div class="carousel-container">
+
+    <div class="carousel-slide fade"><img src="1.jpg"></div>
+    <div class="carousel-slide fade"><img src="2.jpg"></div>
+    <div class="carousel-slide fade"><img src="3.jpg"></div>
+    <div class="carousel-slide fade"><img src="4.jpg"></div>
+    <div class="carousel-slide fade"><img src="5.jpg"></div>
+    <div class="carousel-slide fade"><img src="6.jpg"></div>
+    <div class="carousel-slide fade"><img src="7.jpg"></div>
+    <div class="carousel-slide fade"><img src="8.jpg"></div>
+    <div class="carousel-slide fade"><img src="9.jpg"></div>
+
+</div>
+
+<div class="dots-box">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) { showSlides(slideIndex += n); }
+function currentSlide(n) { showSlides(slideIndex = n); }
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("carousel-slide");
+    let dots = document.getElementsByClassName("dot");
+
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+
+    for (i = 0; i < slides.length; i++) slides[i].style.display = "none";
+    for (i = 0; i < dots.length; i++) dots[i].className = dots[i].className.replace(" active", "");
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
+
+setInterval(() => { plusSlides(1); }, 3000);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 6 Exhibits</title>
+
+<style>
+    body {
+        background: #000;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        color: #00eaff;
+        margin-bottom: 20px;
+        text-shadow: 0 0 10px #00eaff;
+    }
+
+    .box {
+        background: #111;
+        border: 2px solid #00eaff;
+        padding: 15px;
+        margin: 15px auto;
+        width: 90%;
+        max-width: 500px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0 0 10px #00eaff55;
+    }
+
+    .box:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 15px #00eaff;
+    }
+
+    .title {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    /* Animated details section */
+    .details {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        margin-top: 10px;
+        background: #0c0c0c;
+        border-left: 4px solid #00eaff;
+        padding: 0 15px;
+        border-radius: 8px;
+        transition: max-height 0.6s ease, opacity 0.4s ease, padding 0.4s ease;
+        text-align: left;
+        line-height: 1.6;
+    }
+
+    .details.show {
+        max-height: 500px;
+        opacity: 1;
+        padding: 15px;
+    }
+
+</style>
+
+</head>
+<body>
+
+<h1>Class 6 Exhibits</h1>
+
+<!-- Box 1 -->
+<div class="box" onclick="showDetails('d1')">
+    <div class="title">1. Solar System</div>
+    <div class="details" id="d1">
+        <ul>
+            <li>Model showing 8 planets</li>
+            <li>Sun at the center</li>
+            <li>Revolution + rotation concept</li>
+            <li>Each planet labeled with facts</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Box 2 -->
+<div class="box" onclick="showDetails('d2')">
+    <div class="title">2. Rain Water Harvesting</div>
+    <div class="details" id="d2">
+        <ul>
+            <li>Roof water collection model</li>
+            <li>Storage tank and filter system</li>
+            <li>Importance of saving water</li>
+            <li>Uses in irrigation and household work</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Box 3 -->
+<div class="box" onclick="showDetails('d3')">
+    <div class="title">3. Pyramid of Giza</div>
+    <div class="details" id="d3">
+        <ul>
+            <li>History of Egyptian pyramids</li>
+            <li>Structure and architecture</li>
+            <li>Importance of Pharaohs</li>
+            <li>Model showcasing limestone blocks</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Box 4 -->
+<div class="box" onclick="showDetails('d4')">
+    <div class="title">4. All Festival of India – GK</div>
+    <div class="details" id="d4">
+        <ul>
+            <li>Diwali, Holi, Eid, Christmas, Bihu, Pongal</li>
+            <li>Cultural diversity of India</li>
+            <li>Charts & pictures of major festivals</li>
+            <li>Students explain festival importance</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Box 5 -->
+<div class="box" onclick="showDetails('d5')">
+    <div class="title">5. Poem with Drawing – English Literature</div>
+    <div class="details" id="d5">
+        <ul>
+            <li>Beautiful handwritten poem</li>
+            <li>Drawing based on the poem theme</li>
+            <li>Colourful decoration</li>
+            <li>Explanation of poem meaning</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Box 6 -->
+<div class="box" onclick="showDetails('d6')">
+    <div class="title">6. Essay</div>
+    <div class="details" id="d6">
+        <ul>
+            <li>Written essay on any given topic</li>
+            <li>Neat handwriting and presentation</li>
+            <li>Introduction – Body – Conclusion format</li>
+            <li>Proper grammar and punctuation</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Box 7 -->
+<div class="box" onclick="showDetails('d7')">
+    <div class="title">7. Story Writing</div>
+    <div class="details" id="d7">
+        <ul>
+            <li>Creative short story</li>
+            <li>Character introduction</li>
+            <li>Plot with moral value</li>
+            <li>Colourful drawing optional</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Box 8 -->
+<div class="box" onclick="showDetails('d8')">
+    <div class="title">8. Bengali – Alphabets</div>
+    <div class="details" id="d8">
+        <ul>
+            <li>Vowels and Consonants chart</li>
+            <li>Colourful alphabet writing</li>
+            <li>Example words for each letter</li>
+            <li>Drawing for selected alphabets</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Box 9 -->
+<div class="box" onclick="showDetails('d9')">
+    <div class="title">9. Bengali – Bisesa</div>
+    <div class="details" id="d9">
+        <ul>
+            <li>Definition of Bisesa</li>
+            <li>Types and examples</li>
+            <li>Simple chart work</li>
+            <li>Sentence usage demonstration</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Box 10 -->
+<div class="box" onclick="showDetails('d10')">
+    <div class="title">10. Preposition</div>
+    <div class="details" id="d10">
+        <ul>
+            <li>Chart showing prepositions: in, on, under, beside</li>
+            <li>Sentence examples</li>
+            <li>Picture-based explanation</li>
+            <li>Worksheet for students</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+let current = null;
+
+function showDetails(id) {
+    if (current && current !== id) {
+        document.getElementById(current).classList.remove("show");
+    }
+
+    let box = document.getElementById(id);
+
+    if (box.classList.contains("show")) {
+        box.classList.remove("show");
+        current = null;
+    } else {
+        box.classList.add("show");
+        current = id;
+    }
+}
+</script>
+
+</body>
+</html>

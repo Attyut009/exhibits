@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Exhibition 2025 - St. Michael's School, Sarenga</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f0f0f0;
+    }
+
+    /* BLUE HEADER SECTION */
+    .header-box {
+        background-color: #1e6ee6;
+        color: white;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .header-left img {
+        width: 110px;
+        background: white;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .header-text h1 {
+        font-size: 40px;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    .header-text h2 {
+        margin: 5px 0;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    /* TIC SECTION */
+    .tic-box {
+        text-align: center;
+        margin-right: 20px;
+    }
+
+    .tic-box img {
+        width: 95px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 3px solid white;
+    }
+
+    .tic-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 8px;
+    }
+
+    .tic-text {
+        font-size: 16px;
+        margin-top: 3px;
+    }
+
+    /* ABOUT SECTION */
+    .about-section {
+        background-color: #d9d9d9;
+        padding: 30px;
+    }
+
+    .about-section h3 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .about-section p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    /* CAROUSEL */
+    .carousel {
+        width: 70%;
+        max-width: 700px;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 12px;
+        position: relative;
+        box-shadow: 0 4px 25px rgba(0,0,0,0.2);
+    }
+
+    .carousel-track {
+        display: flex;
+        transition: transform 1s ease-in-out;
+    }
+
+    .carousel-track img {
+        flex: 0 0 100%;
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+        border-radius: 12px;
+        pointer-events: none;
+    }
+
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.4);
+        border: none;
+        color: white;
+        font-size: 28px;
+        padding: 10px 16px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .carousel-btn:hover {
+        background: rgba(0,0,0,0.7);
+    }
+
+    .prev { left: 15px; }
+    .next { right: 15px; }
+
+    /* EXHIBITION ANIMATION */
+    .exhibition {
+        background: blue;
+        text-align: center;
+        margin-top: 30px;
+        font-size: 45px;
+        font-weight: bold;
+        color: red;
+        animation: zoomShake 2s infinite;
+        text-shadow: 0 0 15px gold, 0 0 25px orange;
+    }
+
+    @keyframes zoomShake {
+        0% { transform: scale(1) rotate(0deg); }
+        25% { transform: scale(1.15) rotate(1deg); }
+        50% { transform: scale(1) rotate(-1deg); }
+        75% { transform: scale(1.2) rotate(1deg); }
+        100% { transform: scale(1) rotate(0deg); }
+    }
+
+    .exhibition a {
+        color: gold;
+        text-decoration: none;
+    }
+
+    /* FOOTER */
+    footer {
+        background-color: #0d1b2a;
+        color: white;
+        padding: 40px 20px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .footer-box h3 {
+        color: #ffd700;
+        font-size: 22px;
+        margin-bottom: 15px;
+        border-left: 4px solid #ffd700;
+        padding-left: 10px;
+    }
+
+    .footer-box p,
+    .footer-box li {
+        font-size: 16px;
+        list-style: none;
+        padding: 5px 0;
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header-box">
+
+    <!-- LEFT SIDE -->
+    <div class="header-left">
+        <img src="logo-1.png" alt="School Logo">
+
+        <div class="header-text">
+            <h1>ST. MICHAEL'S SCHOOL</h1>
+            <h2>SARENGA</h2>
+            <h2>EXHIBITION 2025</h2>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE (TIC PHOTO + NAME) -->
+    <div class="tic-box">
+        <img src="tic.jpeg" alt="Teacher in Charge">
+        <div class="tic-name">Meghna Saren</div>
+        <div class="tic-text">Teacher-in-Charge</div>
+    </div>
+
+</div>
+<!-- ABOUT SECTION -->
+<div class="about-section">
+    <h3>About</h3>
+    <p>
+       present, and admission is done from p/n -8, address -sarenga, bankura, pin-722150, wb. mention facilities like computer lab, interesting activities, culteral festivals,sports games , bench in every class, filter water, canteen etc
+St. Michael's School Sarenga in Sarenga, Bankura, West Bengal (Pin code: 722150), provides education under the ICSE board curriculum [1]. The school serves students from Pre-Nursery to Class 10, with admissions open for levels from Pre-Nursery to Class 8 [1].
+Teaching and Learning
+The school emphasizes quality teaching and learning processes. Educators focus on creating a supportive and engaging environment that encourages critical thinking and a deep understanding of subjects [1]. The curriculum is designed to be holistic, ensuring students are well-prepared academically while also developing essential life skills [1].
+Facilities and Activities
+St. Michael's School is equipped with various facilities to support student development:
+Infrastructure: Every classroom is furnished with benches, and access to filtered drinking water is provided throughout the premises [1].
+Academics: A dedicated computer lab allows students to gain essential digital literacy skills [1].
+Extracurricular: The school fosters a vibrant community through various activities, including:
+Sports & Games: Promoting physical fitness and teamwork [1].
+Cultural Festivals: Celebrating diversity and artistic expression [1].
+Interesting Activities: Engaging students in hands-on learning and exploration [1].
+Amenities: A canteen facility is available for students and staff [1].<br><br>
+
+        <b>Classes offered:</b><br>
+        Pre-Nursery, Nursery, KG (Junior Building)  
+        Classes I – X (Senior Building).<br><br>
+
+        A positive working environment surrounds the school, with great teachers, staff, and students.<br><br>
+
+        <i>"Let us remember: One book, one pen, one child and one teacher can change the world."</i><br>
+        ~ Malala Yousafzai
+    </p>
+</div>
+</div>
+
+<!-- CAROUSEL -->
+<div class="carousel" id="exhibition">
+    <div class="carousel-track" id="slideImages">
+        <img src="smss1.jpeg">
+        <img src="smss2.jpg">
+        <img src="smss3.jpg">
+        <img src="smss4.jpg">
+        <img src="smss5.jpg">
+        <img src="smss6.jpg">
+    </div>
+
+    <button class="carousel-btn prev" onclick="manualSlide(-1)">❮</button>
+    <button class="carousel-btn next" onclick="manualSlide(1)">❯</button>
+</div>
+
+<script>
+    let index = 0;
+    const slider = document.getElementById("slideImages");
+    const totalSlides = slider.children.length;
+
+    function updateSlide() {
+        slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function autoSlide() {
+        index = (index + 1) % totalSlides;
+        updateSlide();
+    }
+
+    let autoPlay = setInterval(autoSlide, 3000);
+
+    function manualSlide(direction) {
+        clearInterval(autoPlay);
+
+        index += direction;
+        if (index < 0) index = totalSlides - 1;
+        if (index >= totalSlides) index = 0;
+
+        updateSlide();
+        autoPlay = setInterval(autoSlide, 3000);
+    }
+</script>
+
+<!-- EXHIBITION BUTTON -->
+<div class="exhibition">
+    <a href="vv.html">EXHIBITION 2025</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-box">
+            <h3>Contact</h3>
+            <p>Sarenga, Bankura, West Bengal</p>
+            <p>📞 249494964</p>
+            <p>📧 stmichaelsschoolsarenga@gmail.com</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Connect With Us</h3>
+            <p>Follow us on our official platforms.</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Useful Links</h3>
+            <ul>
+                <li>About Us</li>
+                <li>Academics</li>
+                <li>Admissions</li>
+                <li>Messages</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+
+        <div class="footer-box">
+            <h3>Opening Hours</h3>
+            <p>Mon - Fri : 8.00 am - 1.30 pm</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 St. Michael's School, Sarenga. All Rights Reserved.
+    </div>
+</footer>
+
+</body>
+</html>

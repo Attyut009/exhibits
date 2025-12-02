@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 5 Exhibits</title>
+
+<style>
+    body {
+        background: #000;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        color: #00eaff;
+        margin-bottom: 20px;
+        text-shadow: 0 0 10px #00eaff;
+    }
+
+    h2 {
+        margin-top: 30px;
+        color: #ffda00;
+        text-shadow: 0 0 10px #ffda00;
+    }
+
+    /* Exhibit Boxes */
+    .box {
+        background: #111;
+        border: 2px solid #00eaff;
+        padding: 15px;
+        margin: 15px auto;
+        width: 90%;
+        max-width: 500px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0 0 10px #00eaff55;
+    }
+
+    .box:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 15px #00eaff;
+    }
+
+    .title {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .details {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        margin-top: 10px;
+        background: #0c0c0c;
+        border-left: 4px solid #00eaff;
+        padding: 0 15px;
+        border-radius: 8px;
+        transition: max-height 0.6s ease, opacity 0.4s ease, padding 0.4s ease;
+        text-align: left;
+        line-height: 1.6;
+    }
+
+    .details.show {
+        max-height: 500px;
+        opacity: 1;
+        padding: 15px;
+    }
+
+    /* Students line */
+    .student-line {
+        font-size: 20px;
+        margin: 10px auto 30px;
+        color: #00eaff;
+        text-shadow: 0 0 8px #00eaff;
+    }
+</style>
+
+</head>
+<body>
+
+<h1>Class 5 Exhibits</h1>
+
+<h2>Students</h2>
+
+<div class="student-line">
+    Adrija Dutta | Arju Dutta | Sanali Jana | Debadrita Paramanik | Samadrita Sinha
+</div>
+
+<h2>Exhibits</h2>
+
+<!-- Exhibit 1 -->
+<div class="box" onclick="showDetails('d1')">
+    <div class="title">1. Bengali – Kajladidi</div>
+    <div class="details" id="d1">
+        <ul>
+            <li>Story explanation of Kajladidi</li>
+            <li>Main characters and message</li>
+            <li>Drawing based on the story</li>
+            <li>Moral of the lesson</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Exhibit 2 -->
+<div class="box" onclick="showDetails('d2')">
+    <div class="title">2. Language – Bishesan Pad</div>
+    <div class="details" id="d2">
+        <ul>
+            <li>Definition of Bishesan</li>
+            <li>Types of Bishesan</li>
+            <li>Examples with sentences</li>
+            <li>Simple chart work</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Exhibit 3 -->
+<div class="box" onclick="showDetails('d3')">
+    <div class="title">3. Manishi Katha</div>
+    <div class="details" id="d3">
+        <ul>
+            <li>Short biography of a famous personality</li>
+            <li>Important achievements</li>
+            <li>Life values and message</li>
+            <li>Photos or drawings included</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Exhibit 4 -->
+<div class="box" onclick="showDetails('d4')">
+    <div class="title">4. Science – Laser Detector</div>
+    <div class="details" id="d4">
+        <ul>
+            <li>Working model of a simple laser detector</li>
+            <li>Use of laser light and sensor</li>
+            <li>Real-life uses in security systems</li>
+            <li>Explanation chart with diagram</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Exhibit 5 -->
+<div class="box" onclick="showDetails('d5')">
+    <div class="title">5. SST – Volcano</div>
+    <div class="details" id="d5">
+        <ul>
+            <li>Model of a volcano</li>
+            <li>Types: Active, Dormant, Extinct</li>
+            <li>Lava flow explanation</li>
+            <li>Causes of volcanic eruption</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Exhibit 6 -->
+<div class="box" onclick="showDetails('d6')">
+    <div class="title">6. Computer – AI Robot</div>
+    <div class="details" id="d6">
+        <ul>
+            <li>Model of an AI-powered robot</li>
+            <li>Basic concept of Artificial Intelligence</li>
+            <li>Uses of AI in real life</li>
+            <li>Chart with robot parts explanation</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Exhibit 7 -->
+<div class="box" onclick="showDetails('d7')">
+    <div class="title">7. English – Tense</div>
+    <div class="details" id="d7">
+        <ul>
+            <li>3 main tenses: Present, Past, Future</li>
+            <li>Examples and sentence formation</li>
+            <li>Rules for each tense</li>
+            <li>Colourful chart work</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+let current = null;
+
+function showDetails(id) {
+    if (current && current !== id) {
+        document.getElementById(current).classList.remove("show");
+    }
+
+    let box = document.getElementById(id);
+
+    if (box.classList.contains("show")) {
+        box.classList.remove("show");
+        current = null;
+    } else {
+        box.classList.add("show");
+        current = id;
+    }
+}
+</script>
+
+</body>
+</html>

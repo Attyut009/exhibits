@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Class 10 Exhibits</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* Page heading */
+h1 {
+    font-size: 50px;
+    color: #ff00aa;
+    text-shadow: 0 0 10px #ff00aa, 0 0 20px #ff00aa;
+    margin-bottom: 10px;
+}
+
+/* Students list */
+.students {
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+/* Topic boxes */
+.topic {
+    background: linear-gradient(145deg, #111, #222);
+    border: 2px solid #ff00aa;
+    padding: 20px;
+    margin: 15px auto;
+    width: 80%;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+
+.topic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff00aa, 0 0 40px #ff00aa;
+}
+
+/* Details animation */
+.details {
+    max-height: 0;
+    overflow: hidden;
+    background: #111;
+    border-left: 4px solid #ff00aa;
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+    border-radius: 8px;
+    opacity: 0;
+    padding: 0 20px;
+    transition: max-height 0.6s ease, opacity 0.4s ease, padding 0.4s ease;
+}
+
+.details.show {
+    max-height: 500px;
+    opacity: 1;
+    padding: 15px 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Class 10 Exhibits</h1>
+
+    <div class="students">
+        Priya Panda | Subhadeep Haldar | Rudra Mallik | Diksha Rathi
+    </div>
+
+    <!-- Bengali: Bagdhara / Idioms -->
+    <div class="topic" onclick="showDetails('ben')">Bengali: Bagdhara (Idioms)
+        <div class="details" id="ben">
+            1. Bagdhara are special expressions used in Bengali language.<br>
+            2. They give deeper meaning beyond the literal words.<br>
+            3. Students present common idioms with examples and meaning.<br>
+            4. Helps improve creative writing and communication skills.<br>
+            5. Enhances cultural language understanding.
+        </div>
+    </div>
+
+    <!-- Geography / EVS: Layers of Atmosphere -->
+    <div class="topic" onclick="showDetails('geo')">EVS (Geography): Layers of Atmosphere
+        <div class="details" id="geo">
+            1. Atmosphere is divided into layers like Troposphere, Stratosphere, Mesosphere, Thermosphere, and Exosphere.<br>
+            2. Each layer plays a vital role in protecting Earth.<br>
+            3. Ozone layer in the Stratosphere absorbs harmful UV rays.<br>
+            4. Weather changes occur in the Troposphere.<br>
+            5. Students prepare charts and 3D models of atmospheric layers.
+        </div>
+    </div>
+
+    <!-- Chemistry: Carbon & Chemical Bond -->
+    <div class="topic" onclick="showDetails('chem')">Chemistry: Carbon & Chemical Bond
+        <div class="details" id="chem">
+            1. Carbon forms covalent bonds to create millions of organic compounds.<br>
+            2. Carbon bonding includes single, double, and triple bonds.<br>
+            3. Students learn structures like methane, ethane, ethene, and acetylene.<br>
+            4. Carbon’s tetravalency allows long chains and rings.<br>
+            5. Understanding bonding helps in studying organic chemistry.
+        </div>
+    </div>
+
+    <!-- History: Revolt of 1857 -->
+    <div class="topic" onclick="showDetails('hist')">History: Revolt of 1857
+        <div class="details" id="hist">
+            1. The Revolt of 1857 is considered the first war of Indian independence.<br>
+            2. Major leaders included Rani Lakshmi Bai, Mangal Pandey, Nana Saheb, and Tatya Tope.<br>
+            3. Causes included political, economic, military, and religious factors.<br>
+            4. The revolt challenged British rule and inspired nationalism.<br>
+            5. Students create timelines, maps, and leader biographies.
+        </div>
+    </div>
+
+    <!-- Civics: Court of India -->
+    <div class="topic" onclick="showDetails('civ')">Civics: Court System of India
+        <div class="details" id="civ">
+            1. India has a three-level judicial system: Supreme Court, High Courts & District Courts.<br>
+            2. Supreme Court is the highest authority for justice.<br>
+            3. Courts protect fundamental rights of citizens.<br>
+            4. Students learn courtroom procedures and landmark cases.<br>
+            5. Helps understand law, justice, and democracy.
+        </div>
+    </div>
+
+    <!-- EVS: Sustainable Development -->
+    <div class="topic" onclick="showDetails('sus')">EVS: Sustainable Development
+        <div class="details" id="sus">
+            1. Sustainable development means using resources without harming future generations.<br>
+            2. Focuses on environment protection, social equality, and economic growth.<br>
+            3. Students study renewable energy, recycling, and conservation.<br>
+            4. Promotes awareness about climate change and pollution control.<br>
+            5. Encourages eco-friendly lifestyle habits.
+        </div>
+    </div>
+
+    <!-- Commerce: Aids of Trade -->
+    <div class="topic" onclick="showDetails('com')">Commerce: Aids of Trade
+        <div class="details" id="com">
+            1. Aids of trade support buying and selling activities.<br>
+            2. Includes banking, transport, insurance, warehousing, and communication.<br>
+            3. Helps smooth flow of goods from producers to consumers.<br>
+            4. Students prepare diagrams and examples from real life.<br>
+            5. Essential topic for understanding business and commerce.
+        </div>
+    </div>
+
+</div>
+
+<script>
+let current = null;
+
+function showDetails(id) {
+    if (current && current !== id) {
+        document.getElementById(current).classList.remove("show");
+    }
+    
+    const el = document.getElementById(id);
+    
+    if (el.classList.contains("show")) {
+        el.classList.remove("show");
+        current = null;
+    } else {
+        el.classList.add("show");
+        current = id;
+    }
+}
+</script>
+
+</body>
+</html>

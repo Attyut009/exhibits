@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Class 8 Exhibits</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* Page heading */
+h1 {
+    font-size: 50px;
+    color: #00ff88;
+    text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88;
+    margin-bottom: 10px;
+}
+
+/* Students list */
+.students {
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+/* Topics boxes */
+.topic {
+    background: linear-gradient(145deg, #111, #222);
+    border: 2px solid #00ff88;
+    padding: 20px;
+    margin: 15px auto;
+    width: 80%;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+
+.topic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00ff88, 0 0 40px #00ff88;
+}
+
+/* Details inside topic */
+.details {
+    display: none;
+    background: #111;
+    border-left: 4px solid #00ff88;
+    padding: 15px 20px;
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+    border-radius: 8px;
+}
+
+/* Animation for details */
+.details.show {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+</style>
+</head>
+<body>
+
+    <!-- Image Carousel -->
+    <div class="carousel">
+        <div class="carousel-track" id="carouselTrack">
+            <img src="C:/Users/PC1/Desktop/website/img1.jpg" alt="Image 1">
+            <img src="C:/Users/PC1/Desktop/website/img2.jpg" alt="Image 2">
+            <img src="C:/Users/PC1/Desktop/website/img3.jpg" alt="Image 3">
+            <img src="C:/Users/PC1/Desktop/website/img4.jpg" alt="Image 4">
+            <img src="C:/Users/PC1/Desktop/website/img5.jpg" alt="Image 5">
+        </div>
+        <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+        <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+    </div>
+
+<div class="container">
+    <h1>Class 8 Exhibits</h1>
+    <div class="students">
+        Arka Maity | Souharjika Mallick | Sarthak Pal | Sirjan Tudu
+    </div>
+
+    <!-- Geography -->
+    <div class="topic" onclick="showDetails('geo')">Geography: Aryabhatta Satellite
+        <div class="details" id="geo">
+            1. Aryabhatta satellite was India's first satellite. <br>
+            2. It was launched on April 19, 1975. <br>
+            3. It was named after the ancient mathematician Aryabhatta. <br>
+            4. The satellite focused on X-ray astronomy and solar physics. <br>
+            5. It marked the beginning of India's space program.
+        </div>
+    </div>
+
+    <!-- English -->
+    <div class="topic" onclick="showDetails('eng')">English: Direct and Indirect Speech
+        <div class="details" id="eng">
+            1. Direct speech quotes the exact words of the speaker. <br>
+            2. Indirect speech reports what someone said without quoting directly. <br>
+            3. Tense changes often occur when converting from direct to indirect speech. <br>
+            4. Pronouns and time expressions may also need adjustment. <br>
+            5. Learning both forms improves writing and communication skills.
+        </div>
+    </div>
+
+    <!-- Bengali -->
+    <div class="topic" onclick="showDetails('ben')">Bengali: Somas
+        <div class="details" id="ben">
+            1. Somas are an important literary topic in Bengali studies. <br>
+            2. They involve understanding classical poetry and prose forms. <br>
+            3. Students analyze the structure and meaning of Somas. <br>
+            4. It helps improve cultural and language knowledge. <br>
+            5. Projects include presentation and textual interpretation.
+        </div>
+    </div>
+
+    <!-- Physics -->
+    <div class="topic" onclick="showDetails('phy')">Physics: Automatic Street Light
+        <div class="details" id="phy">
+            1. Automatic street lights turn on/off based on light levels. <br>
+            2. A sensor detects sunlight and triggers the circuit. <br>
+            3. LEDs are commonly used for energy efficiency. <br>
+            4. The system saves electricity by only lighting at night. <br>
+            5. Students design and demonstrate the working prototype.
+        </div>
+    </div>
+
+    <!-- Biology -->
+    <div class="topic" onclick="showDetails('bio')">Biology: Respiratory System
+        <div class="details" id="bio">
+            1. The respiratory system allows gas exchange in humans. <br>
+            2. Lungs, trachea, bronchi, and alveoli are key organs. <br>
+            3. Oxygen is taken in, carbon dioxide expelled. <br>
+            4. Diagrams and models help in understanding the system. <br>
+            5. The project demonstrates breathing mechanism and health tips.
+        </div>
+    </div>
+
+    <!-- Computer -->
+    <div class="topic" onclick="showDetails('comp')">Computer: Star Topology and Website
+        <div class="details" id="comp">
+            1. Star topology connects all computers to a central hub. <br>
+            2. It is easy to manage and troubleshoot. <br>
+            3. The project demonstrates data flow in the network. <br>
+            4. Students also create a website for project presentation. <br>
+            5. Combines theory and practical implementation skills.
+        </div>
+    </div>
+
+    <!-- Chemistry -->
+    <div class="topic" onclick="showDetails('chem')">Chemistry: Sedimentation
+        <div class="details" id="chem">
+            1. Sedimentation is the process of settling of particles in a liquid. <br>
+            2. It separates solid and liquid components. <br>
+            3. Used in water purification and laboratory experiments. <br>
+            4. Students observe and record the rate of sedimentation. <br>
+            5. The project explains scientific principles behind the process.
+        </div>
+    </div>
+
+</div>
+
+<script>
+let current = null;
+function showDetails(id) {
+    // Hide previous
+    if (current && current !== id) {
+        document.getElementById(current).classList.remove('show');
+    }
+    // Toggle current
+    const el = document.getElementById(id);
+    if (el.classList.contains('show')) {
+        el.classList.remove('show');
+        current = null;
+    } else {
+        el.classList.add('show');
+        current = id;
+    }
+}
+</script>
+
+</body>
+</html>
